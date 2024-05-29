@@ -38,7 +38,7 @@ public class UserEntity {
 
     @NotBlank
     @Size(max = 30)
-    private String username;
+    private String userName;
 
     @NotBlank
     private String password;
