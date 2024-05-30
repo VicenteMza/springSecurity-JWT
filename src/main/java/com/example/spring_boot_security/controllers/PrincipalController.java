@@ -44,8 +44,7 @@ public class PrincipalController {
                                                 .build())
                                             .collect(Collectors.toSet());
 
-        UserEntity userEntity = UserEntity
-                                    .builder()
+        UserEntity userEntity = UserEntity.builder()
                                     .userName(createUserDTO.getUserName())
                                     .password(createUserDTO.getPassword())
                                     .email(createUserDTO.getEmail())
@@ -60,6 +59,6 @@ public class PrincipalController {
     @DeleteMapping("/deleteUser")
     public String deleteUser(@RequestParam String id) {
         userRepository.deleteById(Long.parseLong(id));
-        return "Delete User".concat(id);
+        return String.format("User with id %s deleted", id);
     }
 }
