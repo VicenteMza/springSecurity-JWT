@@ -27,7 +27,7 @@ public class PrincipalController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello World!";
+        return "Hello from the unsecured endpoint!";
     }
 
     @GetMapping("/helloSecurity")
